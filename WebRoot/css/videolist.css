@@ -1,0 +1,71 @@
+.vl-padding{
+	padding: 0 15px;
+}
+.vl-headbogy{
+	
+	
+	
+}
+.vl-classname{
+	border-bottom: 3px solid #92AC00;
+	margin: 0;
+	line-height: 50px;
+	width: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 24px;
+	padding-bottom: 6px;
+}
+.vl-listbody{
+	padding: 30px;
+}
+.vl-listbody a{
+	color: #333;
+	text-decoration: none;
+
+}
+.vl-listbody a:hover{
+	
+	background-color: #D9EDF7;
+}
+.vl-chapter{
+	line-height: 40px;
+	font-size: 18px;
+	
+}
+.vl-block{
+		display: block;
+		padding: 0px 6px 0px 10px;
+}
+.vl-section{
+	
+	line-height: 40px;
+	font-size: 14px;
+	color: #666;
+}
+.vl-addico{
+	 font-size: 30px;
+	 float: right;
+}
+.vl-ul a{
+	display: block;
+
+	padding: 0px 10px 0px 40px;
+	color: #666;
+	
+}
+.vl-ul a span{
+	line-height: 40px;
+}
+.vl-icon{
+	padding-right: 10px;
+}
+.vl-comimpl{
+	padding: 20px 0px 20px 0px;
+	border-bottom: 1px dashed #ddd;
+}
+.userico{
+	color: #ccc;
+	font-size: 12px;
+	padding-right: 8px;
+}

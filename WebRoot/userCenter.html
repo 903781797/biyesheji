@@ -1,0 +1,400 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title></title>
+		<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css" type="text/css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script src="js/jquery.min.js"></script>
+		<script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/video-js.css" />
+		<link rel="stylesheet" href="css/userCenter.css" />
+		<script type="text/javascript" src="js/video.js"></script>
+		<script src="js/userMenu.js"></script>
+		<script src="js/doT.js"></script>
+	</head>
+
+	<body>
+
+		<nav class="menuShadow navbar navbar-inverse" style="border-radius: 0px;margin-bottom: 0px;">
+			<div class="container mybignav" >
+				<div class="col-lg-3" style="padding-left: 0px;">
+					<a href="#">
+						<!--<h1 class="bigmenuh1">哈尔滨华德精品课</h1>-->
+						<img src="img/logo.png" style="padding-top: 10px;" />
+					</a>
+				</div>
+				<div class="col-lg-4">
+					<ul class="mybigmenuli list-unstyled">
+						<li>
+							<a href="index2.html">
+								<h4>所有课程</h4></a>
+						</li>
+						<li>
+							<a href="#">
+								<h4>答疑</h4></a>
+						</li>
+						<li>
+							<a href="#">
+								<h4>资料</h4></a>
+						</li>
+
+					</ul>
+				</div>
+
+				<div class="col-lg-3">
+					<div class="serchbody ">
+						<input type="text" id="serch" class=" myserch mytext" placeholder="按课程名搜索" />
+						<input type="button" class=" myserch btntext" value="搜" />
+					</div>
+				</div>
+				<div class="col-lg-2 ">
+					<div class="myloginbtn " id="loginmenu">
+						<div id="loginbtn">
+							<a href="javascript:loginIn();" class="mybtn">登录</a>|
+							<a href="javascript:loginOut();" class="mybtn ">注册</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+
+
+		<div class="container uc-spacing ">
+			<div class="col-lg-3 uc-maging " >
+				<div class="bgwrite myborder">
+					<div class="uc-icobody uc-border">
+						<div class="p-img"><img class="img-rounded myimg" src="img/touxiang.png" width="80px" height="80px"></div>
+						<div class="p-name">
+							<span class="uc-username">小毛驴</span>
+							<span class="uc-stting">
+								<a href="#" >个人设置</a>
+							</span>
+						</div>
+					</div>
+					<div class="text-center uc-menu ">
+
+						<a href="javascript:doMessage()" class=" uc-active"><span class="glyphicon glyphicon-envelope uc-ico1"></span>消息<span class="glyphicon glyphicon-triangle-right uc-ico2"></span></a>
+						<a href="javascript:doClasses()" class=""><span class="glyphicon glyphicon-book uc-ico1"></span>课程<span class="glyphicon glyphicon-triangle-right uc-ico2"></span></a>
+						<a href="javascript:doAnswer()" class=""><span class="glyphicon glyphicon-education uc-ico1"></span>答疑<span class="glyphicon glyphicon-triangle-right uc-ico2"></span></a>
+						<a href="javascript:doScore()" class=""><span class="glyphicon glyphicon-object-align-bottom uc-ico1"></span>成绩<span class="glyphicon glyphicon-triangle-right uc-ico2"></span></a>
+
+					</div>
+				</div>
+			</div>
+			<script>
+			
+				$(function() {
+					doMessage();
+					$(".uc-menu a").click(function() {
+						$(this).addClass("uc-active").siblings("a").removeClass("uc-active");
+						document.getElementById("uc-body").innerHTML=getLoading();
+					});
+					$("#readed a").click(function() {
+						$(this).addClass("uc-readed").siblings("a").removeClass("uc-readed");
+					});
+					
+
+				});
+			</script>
+			<div id="uc-body">
+				<script type="text/template" charset="utf-8" id='template_score'>
+					<div class="col-lg-9 " name="uc-body">
+						<div class="uc-titleborder">
+							<p class="uc-title"><span>我的成绩</span></p>
+						</div>
+						<div class="bgwrite myborder mypadding">
+							<div class="info-title ">
+								<div class="info-row">	
+									<div class="col-lg-8 info-bar"> 试卷</div>
+									<div class="col-lg-1 info-bar"> 分数</div>
+									<div class="col-lg-3 info-barend"> 答题时间</div>
+								</div>
+							</div>
+							<div class=" info-row2 ">
+								<div class="col-lg-8 ">
+									<a href="#">请查收您重装云服务器操作系统后的初始密码</a>
+								</div>
+								<div class="col-lg-1 uc-type ">100分</div>
+								<div class="col-lg-3 "> 2012年12月12日 14:53:57</div>
+							</div>
+
+							<div class="info-page">
+								<ul class="pagination pagination-sm">
+									<li>
+										<a href="#">&laquo;</a>
+									</li>
+									<li class="active">
+										<a href="#">1</a>
+									</li>
+									<li>
+										<a href="#">2</a>
+									</li>
+									<li>
+										<a href="#">3</a>
+									</li>
+									<li>
+										<a href="#">4</a>
+									</li>
+									<li>
+										<a href="#">5</a>
+									</li>
+									<li>
+										<a href="#">&raquo;</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</script>
+				<!--
+                	作者：zhaoqingchun163@163.com
+                	时间：2016-09-12
+                	描述：答疑界面
+                -->
+                <script type="text/template" charset="utf-8" id='template_answer'>
+            	<div class="col-lg-9 " >
+						<div class="uc-titleborder">
+							<p class="uc-title"><span>我参与的答疑</span></p>
+						</div>
+						<div class="bgwrite myborder mypadding">
+
+							<div class="uc-infobtn " id="readed">
+								<a href="#" class="uc-readed">全部</a>
+								<a href="#">我发起的问题</a>
+								<a href="#">我回复的问题</a>
+							</div>
+
+							<div class="info-title ">
+								<div class="info-row">
+									<div class="col-lg-1 info-bar"> 类别</div>
+									<div class="col-lg-9 info-bar"> 标题</div>
+									<div class="col-lg-2 info-barend"> 时间</div>
+								
+								</div>
+							</div>
+
+							<div class=" info-row2 ">
+								<div class="col-lg-1 uc-type"> 发起：</div>
+								<div class="col-lg-9 ">
+									<a href="#">请查收您重装云服务器操作系统后的初始密码</a>
+								</div>
+								<div class="col-lg-2 uc-type"> 2012年12月12日 </div>
+							</div>
+							<div class=" info-row2 ">
+								<div class="col-lg-1 uc-type"> 回复：</div>
+								<div class="col-lg-9 "><span>“楼主大好人楼主大好人楼主大好人楼主大好人楼主大好人楼主大好人楼主大好人楼主大好人楼主大好人。。。...”</span>
+									By：<a href="#">作收您重装云服务器操作收您重装云服务器操作作系...</a>
+								</div>
+								<div class="col-lg-2 uc-type"> 2012年12月12日</div>
+							</div>
+
+							
+
+							<div class="info-page">
+								<ul class="pagination pagination-sm">
+									<li>
+										<a href="#">&laquo;</a>
+									</li>
+									<li class="active">
+										<a href="#">1</a>
+									</li>
+									<li>
+										<a href="#">2</a>
+									</li>
+									<li>
+										<a href="#">3</a>
+									</li>
+									<li>
+										<a href="#">4</a>
+									</li>
+									<li>
+										<a href="#">5</a>
+									</li>
+									<li>
+										<a href="#">&raquo;</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+					</script>
+					<!--
+            	作者：zhaoqingchun163@163.com
+            	时间：2016-09-12
+            	描述：消息界面
+            	-->
+            	
+				<script type="text/template" charset="utf-8" id='template_message'>
+					<div class="col-lg-9 " name="uc-body">
+						<div class="uc-titleborder">
+							<p class="uc-title"><span>我收到的消息</span></p>
+						</div>
+						<div class="bgwrite myborder mypadding">
+
+							<div class="uc-infobtn " id="readed">
+								<a href="#" class="uc-readed">全部消息</a>
+								<a href="#">未读消息</a>
+								<a href="#">已读消息</a>
+							</div>
+
+							<div class="info-title ">
+								<div class="info-row">
+									<div class="col-lg-1 info-bar"> <input type="checkbox" id="selectAll" onchange="doCheckbox()"/></div>
+									<div class="col-lg-8 info-bar"> 消息内容</div>
+									<div class="col-lg-3 info-barend"> 时间</div>
+								</div>
+							</div>
+
+							<div class=" info-row2 ">
+								<div class="col-lg-1 "> <input type="checkbox" name="infos" /></div>
+								<div class="col-lg-8 ">
+									<a href="#">请查收您重装云服务器操作系统后的初始密码</a>
+								</div>
+								<div class="col-lg-3 "> 2012年12月12日 14:53:57</div>
+							</div>
+							<div class=" info-row2 ">
+								<div class="col-lg-1 "> <input type="checkbox" name="infos" /></div>
+								<div class="col-lg-8 ">
+									<a href="#">请查收您重装云服务器操作系统后的初始密码</a>
+								</div>
+								<div class="col-lg-3 "> 2012年12月12日 14:53:57</div>
+							</div>
+
+							<div class="uc-infobtn ">
+								<a href="#">删除</a>
+								<a href="#">标记为已读</a>
+							</div>
+
+							<div class="info-page">
+								<ul class="pagination pagination-sm">
+									<li>
+										<a href="#">&laquo;</a>
+									</li>
+									<li class="active">
+										<a href="#">1</a>
+									</li>
+									<li>
+										<a href="#">2</a>
+									</li>
+									<li>
+										<a href="#">3</a>
+									</li>
+									<li>
+										<a href="#">4</a>
+									</li>
+									<li>
+										<a href="#">5</a>
+									</li>
+									<li>
+										<a href="#">&raquo;</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</script>
+				<!--
+            	作者：zhaoqingchun163@163.com
+            	时间：2016-09-12
+            	描述：课程界面
+            -->
+				<script type="text/template" charset="utf-8" id='template_classes'>
+					<div class="col-lg-9 ">
+						<div class="uc-titleborder">
+							<p class="uc-title"><span>我参加的课程</span></p>
+						</div>
+
+						<div class="bgwrite uc-classMapping">
+							<div class="col-lg-3"><img src="" width="174" height="119"></div>
+							<div class="col-lg-7 uc-class">
+								<p class="uc-className">
+									<span class="glyphicon glyphicon-list-alt uc-classIco"></span> 这是一门课程
+								</p>
+								<p><span>课程时长：</span>99小时99分</p>
+								<p><span>授课老师：</span>
+									<a href="#">张老师</a>
+									<a href="#">张老师</a>
+									<a href="#">张老师</a>
+									<a href="#">张老师</a>
+									<a href="#">张老师</a>
+									<a href="#">张老师</a>
+								</p>
+							</div>
+							<div class="col-lg-2" style="line-height: 119px;">
+								<a href="#" class="btn btn-success">继续学习</a>
+							</div>
+						</div>
+
+						<div class="bgwrite uc-classMapping">
+							<div class="col-lg-3"><img src="" width="174" height="119"></div>
+							<div class="col-lg-7 uc-class">
+								<p class="uc-className">
+									<span class="glyphicon glyphicon-list-alt uc-classIco"></span> 这是一门课程
+								</p>
+								<p><span>课程时长：</span>99小时99分</p>
+								<p><span>授课老师：</span>
+									<a href="#">张老师</a>
+									<a href="#">张老师</a>
+									<a href="#">张老师</a>
+									<a href="#">张老师</a>
+									<a href="#">张老师</a>
+									<a href="#">张老师</a>
+								</p>
+							</div>
+							<div class="col-lg-2" style="line-height: 119px;">
+								<a href="#" class="btn btn-success">继续学习</a>
+							</div>
+						</div>
+
+					</div>
+				</script>
+			</div>
+		</div>
+		<script>
+	
+		var h1 =document.getElementById("template_message").innerHTML;
+		var h2=document.getElementById("template_classes").innerHTML;
+		var h3=document.getElementById("template_answer").innerHTML;
+		var h4=document.getElementById("template_score").innerHTML;
+			function doMessage() {
+				
+				$("#uc-body").html(h1);
+			}
+				
+			function doClasses() {
+				
+				$("#uc-body").html(h2);
+			}
+			function doAnswer(){
+				
+				$("#uc-body").html(h3);
+			}
+			function doScore(){
+				
+				$("#uc-body").html(h4);
+			}
+			function doCheckbox() {
+						var sets = document.getElementsByName('infos');
+						var sel = document.getElementById("selectAll");
+						if(sel.checked == true) {
+							for(var i = 0; i < sets.length; i++) {
+								sets[i].checked = true;
+							}
+						} else {
+							for(var i = 0; i < sets.length; i++) {
+								sets[i].checked = false;
+							}
+						}
+
+					}
+		</script>
+	</body>
+
+</html>

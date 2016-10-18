@@ -1,0 +1,123 @@
+.answerfrombody {
+	margin-top: 20px;
+	background-color: #FFFFFF;
+	padding: 20px;
+	overflow: hidden;
+}
+
+.qu_title {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.weijiejue {
+	padding-top: 10px;
+	padding-left: 10px;
+	overflow: hidden;
+}
+
+.weijiejue ul li a {
+	font-size: 15px;
+	color: #222222;
+}
+
+.clearfl {
+	overflow: hidden;
+	margin: 20px 0px;
+}
+
+.clearfl a:hover {
+	text-decoration: none;
+}
+.te_list{
+	overflow: hidden;
+	padding-left: 10px;
+}
+
+#goanser {
+	padding-top: 30px;
+	text-align: center;
+}
+
+#goanser .title {
+	font-weight: bold;
+}
+
+#goanser .title2 {
+	color: #999;
+	font-size: 20px;
+	margin-bottom: 40px;
+}
+
+.ans_btn {
+	width: 170px;
+	height: 55px;
+	border-radius: 5px;
+	background-color: #92AC00;
+	color: #ffffff;
+	line-height: 25px;
+	margin: auto;
+}
+
+.ans_btn:hover {
+	background-color: #708400;
+}
+
+.ans_btn p {
+	margin: 0px;
+	padding: 0px;
+}
+
+.ans_btn .context {
+	font-size: 20px;
+	font-weight: bold;
+}
+#remen ul li a{
+	font-size: 16px;
+	color: #222222;
+	
+}
+#remen ul li{
+	padding: 8px;
+	border-bottom: 1px dashed #ddd;
+}
+#remen .type{
+	padding-right: 5px;
+	color: #337ab7;
+}
+.margin{
+	margin-top:15px ;
+}
+.ans-time{
+	font-size: 12px;
+color: #ccc;
+float: right;
+
+
+}
+#an_type .typename{
+	padding-left: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	min-width:200px;
+}
+#an_type .typehelp{
+
+	padding-left: 10px;
+	font-size: 14px;
+	display: block;
+}
+.borderxx{
+	border-bottom: 1px dashed #ddd;
+	overflow: hidden;
+	padding-bottom: 5px;
+}
+.teindex{
+	border-bottom: 1px dashed #ddd;
+	padding :12px 10px;
+}
+.gengduo{
+	float: right;
+	line-height: 50px;
+	padding-right: 10px;
+}

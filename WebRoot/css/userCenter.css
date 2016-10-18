@@ -1,0 +1,197 @@
+.uc-spacing {
+	margin-top: 40px;
+}
+
+.uc-icobody {
+	height: 75px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.uc-border {
+	border-bottom: 1px solid #ddd;
+	box-shadow: 0px 0px 5px #DDDDDD;
+}
+
+.uc-border2 {
+	border-bottom: 1px solid #ddd;
+}
+
+.p-img {
+	float: left;
+}
+
+.myimg {
+	border: 1px solid #ddd;
+	padding: 2px;
+	background-color: white;
+	position: relative;
+	margin-left: 15px;
+	top: -15px;
+}
+
+.p-name {
+	float: left;
+	padding-left: 20px;
+}
+
+.uc-username {
+	line-height: 45px;
+	font-size: 16px;
+	margin: 0;
+}
+
+.uc-stting {
+	display: block;
+	font-size: 12px;
+}
+
+.uc-menu li {}
+
+.uc-menu a {
+	display: block;
+	font-size: 18px;
+}
+
+.uc-menu a span {
+	line-height: 60px;
+}
+
+.uc-ico1 {
+	font-size: 14px;
+	padding-right: 30px;
+}
+
+.uc-ico2 {
+	font-size: 10px;
+	padding-right: 30px;
+	float: right;
+}
+
+.uc-menu a:hover {
+	z-index: 0;
+	text-decoration: none;
+}
+
+.uc-active {
+	color: white;
+	background-color: #92AC00;
+}
+
+.uc-active:focus,
+.uc-active:hover {
+	color: #fff;
+	background-color: #92AC00;
+	text-decoration: none;
+}
+
+.uc-title {
+	height: 40px;
+	margin-bottom: 1px;
+}
+
+.uc-title span {
+	float: left;
+	line-height: 40px;
+	background-color: white;
+	padding: 0 40px;
+	font-size: 18px;
+	color: #92AC00;
+	border-bottom: 2px solid #92AC00;
+}
+
+.uc-titleborder {
+	border-bottom: 2px solid #ccc;
+	margin-bottom: 10px;
+}
+
+.mypadding {
+	padding: 10px;
+}
+
+.uc-infobtn {
+margin: 10px 0px;
+}
+
+.uc-infobtn a {
+	line-height: 30px;
+	padding: 5px 10px;
+	border: 1px solid #DDDDDD;
+	width: 70px;
+}
+
+.uc-infobtn a:hover {
+	text-decoration: none;
+	background-color: #F2F8FF;
+	color: #23527C;
+}
+
+.info-title {
+	background-color: #F6F8FA;
+	
+	border-bottom: 1px solid #DDDDDD;
+	border-top: 1px solid #DDDDDD;
+}
+.info-row{
+
+	overflow: hidden;
+}
+.info-row2{
+	padding: 10px 0px;
+	border-bottom: 1px dashed #ddd;
+	overflow: hidden;
+	}
+.info-row2:hover{
+	background-color: #F2F8FF;
+}
+.info-bar{
+	height: 20px;
+	border-right: 1px solid #DDDDDD;
+	margin: 4px 0px;
+	font-weight: bold;
+}
+.uc-maging{
+	margin-bottom: 20px;
+}
+.info-barend{
+	height: 20px;
+	margin: 4px 0px;
+	font-weight: bold;
+}
+.info-page{
+	text-align: right;
+	margin-top: 10px;
+}
+.uc-readed,.uc-readed:focus{
+	background-color: #337AB7;
+	color: #ffffff;
+	text-decoration: none;
+}
+.uc-classIco{
+font-size: 18px;
+margin-right: 3px;
+}
+.uc-className{
+	font-size: 18px;
+	padding-bottom: 20px;
+}
+.uc-classMapping{
+	padding: 10px 0px;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+.uc-class  p span{
+	color: #b3b3b3;
+}
+.uc-class  p  a{
+	color: #222222;
+	
+	padding-right: 5px;
+}
+.uc-teacher li{
+	float: left;
+}
+.uc-type{
+	font-size: 12px;
+	padding-top: 3px;
+}

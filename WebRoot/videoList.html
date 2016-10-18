@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title></title>
+		<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css" type="text/css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script src="js/jquery.min.js"></script>
+		<script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/video-js.css" />
+		<link rel="stylesheet" href="css/videolist.css" />
+		<script type="text/javascript" src="js/video.js"></script>
+		<script src="js/userMenu.js"></script>
+	</head>
+
+	<body>
+
+		<nav class="menuShadow navbar navbar-inverse" style="border-radius: 0px;margin-bottom: 0px;">
+			<div class="container mybignav">
+				<div class="col-lg-3" style="padding-left: 0px;">
+					<a href="#">
+						<!--<h1 class="bigmenuh1">哈尔滨华德精品课</h1>-->
+						<img src="img/logo.png" style="padding-top: 10px;" />
+					</a>
+				</div>
+				<div class="col-lg-4">
+					<ul class="mybigmenuli list-unstyled">
+						<li>
+							<a href="index2.html">
+								<h4>所有课程</h4></a>
+						</li>
+						<li>
+							<a href="#">
+								<h4>社区</h4></a>
+						</li>
+						<li>
+							<a href="#">
+								<h4>资料</h4></a>
+						</li>
+
+					</ul>
+				</div>
+
+				<div class="col-lg-3">
+					<div class="serchbody ">
+						<input type="text" id="serch" class=" myserch mytext" placeholder="按课程名搜索" />
+						<input type="button" class=" myserch btntext" value="搜" />
+					</div>
+				</div>
+				<div class="col-lg-2 ">
+					<div class="myloginbtn " id="loginmenu">
+						<div id="loginbtn">
+							<a href="javascript:loginIn();" class="mybtn">登录</a>|
+							<a href="javascript:loginOut();" class="mybtn ">注册</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="menu2">
+			<div class="container">
+				<ul class="list-unstyled mysmallmenubody">
+					<li>
+						<a href="index.html">课程概况</a>
+					</li>
+					<li>
+						<a href="videoList.html">教学录像</a>
+					</li>
+					<li>
+						<a href="RecourseList.html">教学资源</a>
+					</li>
+					<li>
+						<a href="testpaperList.html">模拟试题</a>
+					</li>
+					<li>
+						<a href="olineAnswer.html">在线答疑</a>
+					</li>
+					<li>
+						<a href="taskList.html">作业</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--
+			教学视频列表
+		-->
+		<div class="container myspacing">
+			<div class="col-lg-12">
+				<ol class="breadcrumb bgwrite myborder  ">
+					当前位置：
+					<li>
+						<a href="#">人人爱设计</a>
+					</li>
+
+					<li class="">教学录像</li>
+				</ol>
+			</div>
+		</div>
+
+		<div class="container  ">
+			<div class="col-lg-9 ">
+				<div class="bgwrite  ">
+					<div class="widthFull borderbottom ">
+						<span class="vl-classname"> 人人爱设计</span>
+					</div>
+					<div class="widthFull vl-listbody" id="accordion">
+
+						<div class="vl-chapter borderbottom">
+							<a class="vl-block" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+								第一章：这是第一张内容<span class=" vl-addico ">+</span>
+							</a>
+							<div id="collapse1" class="vl-section collapse in">
+								<ul class="list-unstyled vl-ul">
+									<li class="">
+										<a href="video.html"><span class="glyphicon glyphicon-facetime-video vl-icon"></span>1.1第一节<span class="glyphicon glyphicon-play-circle floatright"></span></a>
+										<a href=""><span class="glyphicon glyphicon-facetime-video vl-icon"></span>1.1第一节<span class="glyphicon glyphicon-play-circle floatright"></span></a>
+										<a href=""><span class="glyphicon glyphicon-facetime-video vl-icon"></span>1.1第一节<span class="glyphicon glyphicon-play-circle floatright"></span></a>
+										<a href=""><span class="glyphicon glyphicon-facetime-video vl-icon"></span>1.1第一节<span class="glyphicon glyphicon-play-circle floatright"></span></a>
+										<a href=""><span class="glyphicon glyphicon-facetime-video vl-icon"></span>1.1第一节<span class="glyphicon glyphicon-play-circle floatright"></span></a>
+
+									</li>
+
+								</ul>
+							</div>
+						</div>
+						<div class="vl-chapter borderbottom">
+							<a class="vl-block" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+								第一章：这是第一张内容<span class=" vl-addico ">+</span>
+							</a>
+							<div id="collapse3" class="vl-section collapse in">
+								<ul class="list-unstyled vl-ul">
+									<li class="">
+										<a href=""><span class="glyphicon glyphicon-facetime-video vl-icon"></span>1.1第一节<span class="glyphicon glyphicon-play-circle floatright"></span></a>
+										<a href=""><span class="glyphicon glyphicon-facetime-video vl-icon"></span>1.1第一节<span class="glyphicon glyphicon-play-circle floatright"></span></a>
+										<a href=""><span class="glyphicon glyphicon-facetime-video vl-icon"></span>1.1第一节<span class="glyphicon glyphicon-play-circle floatright"></span></a>
+										<a href=""><span class="glyphicon glyphicon-facetime-video vl-icon"></span>1.1第一节<span class="glyphicon glyphicon-play-circle floatright"></span></a>
+										<a href=""><span class="glyphicon glyphicon-facetime-video vl-icon"></span>1.1第一节<span class="glyphicon glyphicon-play-circle floatright"></span></a>
+
+									</li>
+
+								</ul>
+							</div>
+						</div>
+						<div class="vl-chapter borderbottom">
+							<a class="vl-block" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+								第一章：这是第一张内容<span class=" vl-addico ">+</span>
+							</a>
+							<div id="collapse2" class="vl-section collapse in">
+								<ul class="list-unstyled vl-ul">
+									<li class="">
+										<a href=""><span class="glyphicon glyphicon-facetime-video vl-icon"></span>1.1第一节<span class="glyphicon glyphicon-play-circle floatright"></span></a>
+										<a href=""><span class="glyphicon glyphicon-facetime-video vl-icon"></span>1.1第一节<span class="glyphicon glyphicon-play-circle floatright"></span></a>
+										<a href=""><span class="glyphicon glyphicon-facetime-video vl-icon"></span>1.1第一节<span class="glyphicon glyphicon-play-circle floatright"></span></a>
+										<a href=""><span class="glyphicon glyphicon-facetime-video vl-icon"></span>1.1第一节<span class="glyphicon glyphicon-play-circle floatright"></span></a>
+										<a href=""><span class="glyphicon glyphicon-facetime-video vl-icon"></span>1.1第一节<span class="glyphicon glyphicon-play-circle floatright"></span></a>
+
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+			<!--
+				
+			-->
+			<div class="col-lg-3 ">
+				<div class="bgwrite vl-padding">
+					<div class="down ">
+						<div class="commentBody  ">
+							<h4>资料下载</h4></div>
+						<div class="down">
+							<ul class="list-unstyled">
+
+								<li class="glyphicon glyphicon-save"> <span>文件名</span>
+									<a href="#">下载</a>
+								</li>
+								<li class="glyphicon glyphicon-save"> <span>文件名</span>
+									<a href="#">下载</a>
+								</li>
+								<li class="glyphicon glyphicon-save"> <span>文件名</span>
+									<a href="#">下载</a>
+								</li>
+								<li class="glyphicon glyphicon-save"> <span>文件名</span>
+									<a href="#">下载</a>
+								</li>
+								<li class="glyphicon glyphicon-save"> <span>文件名</span>
+									<a href="#">下载</a>
+								</li>
+								<li class="glyphicon glyphicon-save"> <span>文件名</span>
+									<a href="#">下载</a>
+								</li>
+
+							</ul>
+						</div>
+
+					</div>
+
+					<div class="down">
+						<div class="commentBody  ">
+							<h4>猜你喜欢的课程</h4>
+						</div>
+						<div class="">
+							<a href="#" style="float: none;">
+
+								<img width="230px" src="img/touxiang.png" />
+								<span class="xgkcnr">这里显示他的内容</span>
+
+							</a>
+						</div>
+
+						<div class="">
+							<a href="#" style="float: none;">
+
+								<img width="230px" src="img/touxiang.png" />
+								<span class="xgkcnr">这里显示他的内容</span>
+
+							</a>
+						</div>
+
+						<div class="">
+							<a href="#" style="float: none;">
+
+								<img width="230px" src="img/touxiang.png" />
+								<span class="xgkcnr">这里显示他的内容</span>
+
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
