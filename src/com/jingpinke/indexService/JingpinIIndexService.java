@@ -1,5 +1,7 @@
 package com.jingpinke.indexService;
 
-public interface JingpinIIndexService {
+import java.util.List;
 
+public interface JingpinIIndexService {
+public List JingpinHomeService();
 }
