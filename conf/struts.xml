@@ -4,7 +4,7 @@
 	<constant name="struts.devMode" value="true"></constant>
 	<package name="ssh" extends="struts-default" >
 	<action name ="index" class="com.jingpinke.indexAction.IndexAction">
-	<result>WEB-INF/jsp/index2.jsp</result>
+	<result>WEB-INF/jsp/index.jsp</result>
 	</action>
 	</package>
 </struts>    
