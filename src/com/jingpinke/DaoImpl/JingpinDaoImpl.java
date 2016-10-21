@@ -1,4 +1,4 @@
-package com.jingpinke.homeDaoImpl;
+package com.jingpinke.DaoImpl;
 
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -7,9 +7,9 @@ import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jingpinke.homeDao.JingpinIIndexDao;
+import com.jingpinke.Dao.JingpinIDao;
 @Transactional
-public class JingpinIndexDaoImpl implements JingpinIIndexDao {
+public class JingpinDaoImpl implements JingpinIDao {
 	private SessionFactory sf;
 	private SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
@@ -18,7 +18,7 @@ public class JingpinIndexDaoImpl implements JingpinIIndexDao {
 	}
 
 	@Override
-	public List JinpinHomeDao(String sql) {
+	public List JinpinSqlDao(String sql) {
 		String hql = "select new map(ct.ctId as ctid,ct.ctName as ctname,ct.ctDesc as ctdesc, c.coName as coname,c.coDecs as codesc"
 				+ " ,co.coId as coid,COUNT(sd.stId) as count )"
 				+ " from Coursetype ct,Course as c LEFT JOIN study as sd on sd.course=c"
@@ -27,6 +27,12 @@ public class JingpinIndexDaoImpl implements JingpinIIndexDao {
 //		Query q = sf.getCurrentSession().createQuery(sql);
 		Query q = sf.getCurrentSession().createSQLQuery(sql);
 		
+		return q.list();
+	}
+
+	@Override
+	public List JinpinHqlDao(String hql) {
+		Query q = sf.getCurrentSession().createQuery(hql);
 		return q.list();
 	}
 }

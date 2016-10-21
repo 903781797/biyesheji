@@ -15,11 +15,11 @@
 				<div class="col-lg-4">
 					<ul class="mybigmenuli list-unstyled">
 						<li>
-							<a href="#">
+							<a href="index2.html">
 								<h4>所有课程</h4></a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="answerBigList.html">
 								<h4>答疑</h4></a>
 						</li>
 						<li>

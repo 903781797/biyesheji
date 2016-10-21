@@ -1,6 +1,7 @@
 package com.jingpinke.indexService;
 
 import java.util.List;
+import java.util.Map;
 
 import com.jingpinke.entity.Coursetype;
 
@@ -10,7 +11,7 @@ public interface JingpinIIndexService {
      * Create Date :2016-10-20
      * Description: 所有课程首页Service
      */
-public List JingpinHomeService();
+public Map JingpinHomeService();
 /**
  * Writer：zhaoqingchun
  * Create Date :2016-10-20
@@ -28,5 +29,5 @@ public List JingpinCourseType();
  * Create Date :2016-10-20
  * Description: 所有课程
  */
-public List JIngpinCourse(List<Coursetype> ct);
+public List JingpinCourse(List<Coursetype> ct);
 }
