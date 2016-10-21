@@ -19,14 +19,7 @@ public class JingpinDaoImpl implements JingpinIDao {
 
 	@Override
 	public List JinpinSqlDao(String sql) {
-		String hql = "select new map(ct.ctId as ctid,ct.ctName as ctname,ct.ctDesc as ctdesc, c.coName as coname,c.coDecs as codesc"
-				+ " ,co.coId as coid,COUNT(sd.stId) as count )"
-				+ " from Coursetype ct,Course as c LEFT JOIN study as sd on sd.course=c"
-				+ " WHERE ct=co.coursetype GROUP BYc.coId";
-		
-//		Query q = sf.getCurrentSession().createQuery(sql);
 		Query q = sf.getCurrentSession().createSQLQuery(sql);
-		
 		return q.list();
 	}
 
