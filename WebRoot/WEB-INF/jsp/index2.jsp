@@ -1,4 +1,5 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*,com.jingpinke.entity.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -40,8 +41,8 @@
 	<div class="menu2">
 		<div class="container">
 			<ul class="list-unstyled mysmallmenubody">
-				<li><a href="index.html">课程概况</a></li>
-				<li><a href="videoList.html">教学录像</a></li>
+				<li><a href="index_courseHome?courseid=<s:property value="allCourse.course.coid"/>">课程概况</a></li>
+				<li><a href="index_videoList?courseid=<s:property value="allCourse.course.coid"/>">教学录像</a></li>
 				<li><a href="RecourseList.html">教学资源</a></li>
 				<li><a href="testpaperList.html">模拟试题</a></li>
 				<li><a href="olineAnswer.html">在线答疑</a></li>
@@ -53,8 +54,7 @@
 	<div class="container myspacing">
 		<ol class="breadcrumb bgwrite myborder ">
 			当前位置：
-
-			<li class="">人人爱设计</li>
+			<li class=""><s:property value="allCourse.course.coname"/></li>
 		</ol>
 	</div>
 	<div class="container ">
@@ -67,15 +67,15 @@
 			<div class="col-lg-12">
 				<div class="titlebox myborder bgwrite">
 					<div class="title_img ">
-						<!--<img width="300px" height="200px" src="#" />-->
-						<video id="my-video" class="video-js vjs-big-play-centered "
+						<img width="300px" height="200px" src="<s:property value="allCourse.course.coimg"/>" />
+						<!--<video id="my-video" class="video-js vjs-big-play-centered "
 							width="300px" height="200px" controls preload="auto"
 							data-setup=""> <!--poster=""--> <source src="video/1.mp4"
-							type='video/mp4' /> </video>
+							type='video/mp4' /> </video>-->
 					</div>
 					<div class="title-content col-lg-8">
-						<h2>人人爱设计</h2>
-						<p class="myintroduction">设计无处不在，一支笔、一个杯子、一张沙发甚至是一座城市都是设计的成果。设计是一种思维方式，教给我们怎样发现问题，怎么有效的解决问题。设计更是一面镜子，它是世界的缩影，让我们学会如何发现身边的美丽世界，学会更加积极乐观地生活。山东大学“学生最喜爱的老师”王震亚带您走进设计的世界。</p>
+						<h2><s:property value="allCourse.course.coname"/></h2>
+						<p class="myintroduction"><s:property value="allCourse.course.coi "/></p>
 					</div>
 				</div>
 			</div>
@@ -90,16 +90,17 @@
 				<div class="myborder myspacing bgwrite">
 					<div class="texttitle" id="section-1">课程描述</div>
 					<div class="content">
-						《人人爱设计》面向所有专业大学生开课，其目标是：普及创新设计知识和方法，提高学生的创新设计能力，进而提高全社会的创新意识。 <br>
-						<br> 这是一门艺术欣赏课，你将领略到创意的神奇和无所不在； 这是一门科技普及课，你会了解很多关于设计的知识；
-						这更是一门创新实践课，你会发现，你也可以做一名设计师！ <br> <br>设计是一种本能，每个人心底都藏着一位设计师的灵魂。
+						<s:property value="allCourse.course.codesc "/>
 					</div>
 					<div class="texttitle" id="section-2">预备知识</div>
-					<div class="content">无</div>
+					<div class="content"><s:property value="allCourse.course.coknow "/></div>
 					<div class="texttitle" id="section-3">课程大纲</div>
 					<div class="content">
+					<s:iterator value="allCourse.chapter">
+						<p class="chapter"><s:property value="name"/></p>
+					</s:iterator>
 						<h4>1. 什么是设计</h4>
-						<p class="chapter">1.1 为什么说人人爱设计</p>
+					
 						<p class="chapter">1.2 什么是设计</p>
 						<p class="chapter">1.3 设计的几个性质</p>
 						<h4>2. 什么是好设计</h4>
@@ -119,11 +120,13 @@
 					<div class="texttitle" id="section-4">授课教师</div>
 					<div class="content">
 						<ul class="list-unstyled">
-							<li><img src="#" width="80px" height="80px"
+						<s:iterator value="allCourse.teacher">
+							<li><img src="<s:property value="tico"/>" width="80px" height="80px"
 								class="img-circle">
 								<p>
-									刘老师<span>博士后</span>
+									<s:property value="tname"/><span><s:property value="ttitl"/></span>
 								</p></li>
+								</s:iterator>
 						</ul>
 					</div>
 				</div>
@@ -165,7 +168,7 @@
 					<div class="content">
 						<p class="content">课程时长：99小时99分</p>
 						<center>
-							<a class="btn btn-success addclassbtn" />加入课程</a>
+							<a class="btn btn-success addclassbtn" href="<s:property value="allCourse.course.coid"/>" />加入课程</a>
 						</center>
 					</div>
 				</div>

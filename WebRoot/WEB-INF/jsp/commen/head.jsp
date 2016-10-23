@@ -15,7 +15,7 @@
 				<div class="col-lg-4">
 					<ul class="mybigmenuli list-unstyled">
 						<li>
-							<a href="index2.html">
+							<a href="index">
 								<h4>所有课程</h4></a>
 						</li>
 						<li>

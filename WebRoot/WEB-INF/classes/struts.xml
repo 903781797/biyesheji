@@ -3,8 +3,13 @@
 <struts>
 	<constant name="struts.devMode" value="true"></constant>
 	<package name="ssh" extends="struts-default" >
-	<action name ="index_*" class="indexAction" >
+	<action name ="index" class="indexAction" >
 	<result>WEB-INF/jsp/index.jsp</result>
+	</action>
+	<action name="index_*"  class="indexAction" method="{1}">
+	<result name="courseHome">WEB-INF/jsp/index2.jsp</result>
+	<result name="videoList">WEB-INF/jsp/videoList.jsp</result>
+	<result name="video">WEB-INF/jsp/video.jsp</result>
 	</action>
 	</package>
 </struts>    
