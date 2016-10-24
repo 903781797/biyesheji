@@ -1,1 +1,6 @@
+/applicationContext.xml
 /com
+/db.properties
+/hibernate.cfg.xml
+/home.xml
+/struts.xml

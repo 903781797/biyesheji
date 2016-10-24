@@ -1,4 +1,14 @@
-﻿<!DOCTYPE html>
+<%@ page language="java" import="java.util.*,com.jingpinke.entity.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+	int i=1;
+%>
+
+<!DOCTYPE html>
 <html>
 
 	<head>
@@ -25,10 +35,10 @@
 		<div class="navbar navbar-inverse myvideohead" style="border-radius: 0px;margin-bottom: 0px;">
 			<div class="myvideotitle">
 				<div class="floatleft">
-					<a href="#" class="backoff-a">
+					<a href="index_videoList?courseid=<s:property value="allCourse.coid"/>" class="backoff-a">
 						<</a>
 				</div>
-				<div class="classname">1课程名称 <span class="classname2"> 1.1第一章 乐福托尔斯泰</span></div>
+				<div class="classname"><s:property value="allCourse.coname"/> <span class="classname2"> <s:property value="allCourse.name"/></span></div>
 			</div>
 			<div class="fl-left">
 				<div class="floatleft ">
@@ -62,7 +72,7 @@
 			<!---->
 			<div class="myvideojs ">
 				<video id="my-video" height="450px" class=" video-js vjs-big-play-centered myvideowidth " controls preload="auto" data-setup="">
-					<source src="video/1.mp4" type='video/mp4' />
+					<source src='<s:property value="allCourse.src"/>' type='video/mp4' />
 				</video>
 				
 			</div>
@@ -73,24 +83,14 @@
 				<div class="mymenu-body" id="entitymenu">
 					
 					<ul class="list-unstyled ">
-						<li class="mymenu-title">1课程名称</li>
+						<li class="mymenu-title"><s:property value="allCourse.coname"/> </li>
 						<li class="mymeny-chapter">1.1第一章 乐福托尔斯泰</li>
+						<s:iterator value="allCourse.videoList">
 						<li class="mymeny-section ">
-							<a href="#" style="color: #92ac00;"><span class="glyphicon glyphicon-play mymenuico"></span>1.1.1第一节 托尔斯泰 <span class="menutime">59分钟</span></a>
+							<a href='index_video?courseid=<s:property value="allCourse.coid"/>&videoid=<s:property value="id"/>' <s:if test="id==%{callCourse.id}">style="color: #92ac00;"</s:if>><span class="glyphicon glyphicon-play mymenuico"></span>
+							<%=i++ %><s:property value="name"/> <span class="menutime">59分钟</span></a>
 						</li>
-
-						<li class="mymeny-chapter">1.1第一章 乐福托尔斯泰</li>
-						<li class="mymeny-section">
-							<a href="#"><span class="glyphicon glyphicon-play mymenuico"></span>1.1.1第一节 托尔斯泰 <span class="menutime">59分钟</span></a>
-						</li>
-						<li class="mymeny-section">
-							<a href="#"><span class="glyphicon glyphicon-play mymenuico"></span>1.1.1第一节 托尔斯泰 <span class="menutime">59分钟</span></a>
-						</li>
-						<li class="mymeny-section">
-							<a href="#"><span class="glyphicon glyphicon-play mymenuico"></span>1.1.1第一节 托尔斯泰 <span class="menutime">59分钟</span></a>
-						</li>
-
-						
+					</s:iterator >					
 					</ul>
 				</div>
 			</div>
@@ -210,32 +210,18 @@ $('#my-video').bind('contextmenu',function() { return false; });
 				<div class="down">
 					<div class="commentBody  ">
 						<h4>猜你喜欢的课程</h4></div>
+				
+					<s:iterator value="allCourse.hot">
 					<div class="">
-						<a href="#" style="float: none;">
+						<a href="index_courseHome?courseid=<s:property value="coid"/>" style="float: none;">
 							<p class="xgkc">
-								<img width="250px" src="img/touxiang.png" />
-								<span class="xgkcnr">这里显示他的内容</span>
+								<img width="250px" src="<s:property value="coimg"/>" />
+								<span class="xgkcnr"><s:property value="coname"/></span>
 							</p>
 						</a>
 					</div>
-
-					<div class="">
-						<a href="#" style="float: none;">
-							<p class="xgkc">
-								<img width="250px" src="img/touxiang.png" />
-								<span class="xgkcnr">这里显示他的内容</span>
-							</p>
-						</a>
-					</div>
-
-					<div class="">
-						<a href="#" style="float: none;">
-							<p class="xgkc">
-								<img width="250px" src="img/touxiang.png" />
-								<span class="xgkcnr">这里显示他的内容</span>
-							</p>
-						</a>
-					</div>
+					</s:iterator>
+			
 
 				</div>
 

@@ -62,7 +62,6 @@
 				<value>com/jingpinke/entity/Teaching.hbm.xml</value>
 				<value>com/jingpinke/entity/Testpaper.hbm.xml</value>
 				<value>com/jingpinke/entity/User.hbm.xml</value>
-				<value>com/jingpinke/entity/Video.hbm.xml</value>
 			</list>
 
 		</property>

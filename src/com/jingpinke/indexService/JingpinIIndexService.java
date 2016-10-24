@@ -30,4 +30,22 @@ public List JingpinCourseType();
  * Description: 所有课程
  */
 public List JingpinCourse(List<Coursetype> ct);
+/**
+ * Writer：zhaoqingchun
+ * Create Date :2016-10-21
+ * Description: 指定课程首页
+ */
+public Map JingpinCourseHomeService(String id);
+/**
+ * Writer：zhaoqingchun
+ * Create Date :2016-10-23
+ * Description: 视频列表
+ */
+public Map JingpinVideoListService(String id);
+/**
+ * Writer：zhaoqingchun
+ * Create Date :2016-10-23
+ * Description: 视频
+ */
+public Map JingpinVideoService(String id,String video);
 }
