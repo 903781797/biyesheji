@@ -1,5 +1,6 @@
 package com.jingpinke.indexAction;
 
+import java.util.List;
 import java.util.Map;
 
 import com.jingpinke.indexService.JingpinIIndexService;
@@ -10,6 +11,14 @@ public class IndexAction extends ActionSupport {
     private Map allCourse;
     private String courseid;
     private String videoid;
+    private List list ;
+	public List getList() {
+		return list;
+	}
+
+	public void setList(List list) {
+		this.list = list;
+	}
 
 	public String getVideoid() {
 		return videoid;
@@ -38,7 +47,7 @@ public class IndexAction extends ActionSupport {
 	}
     public String courseHome(){
     	allCourse = jingpinIndexService.JingpinCourseHomeService(courseid);
-    	System.out.println(allCourse);
+
     	return "courseHome";
     }
     public String videoList(){
@@ -49,6 +58,22 @@ public class IndexAction extends ActionSupport {
     	allCourse=jingpinIndexService.JingpinVideoService(courseid,videoid);
     	return "video";
     }
+    public String resource(){
+    	allCourse = jingpinIndexService.JingpinResouce(courseid);
+    	return "resource";
+    }
+    public String testpaper(){
+    	allCourse = jingpinIndexService.JingpinTestPaper(courseid);
+    	return "testpaperList";
+    }
+    public String taskList(){
+    	allCourse = jingpinIndexService.JingpinTaskList(courseid);
+    	return "taskList";
+    }
+    public String task(){
+    	allCourse = jingpinIndexService.JingpinTask(courseid, videoid);
+    	return "task";
+    }
 	public Map getAllCourse() {
 		return allCourse;
 	}
@@ -56,4 +81,5 @@ public class IndexAction extends ActionSupport {
 	public void setAllCourse(Map allCourse) {
 		this.allCourse = allCourse;
 	}
+	
 }
