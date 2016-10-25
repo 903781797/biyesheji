@@ -6,9 +6,11 @@ import java.util.List;
 import java.util.Map;
 
 import com.jingpinke.Dao.JingpinIDao;
+import com.jingpinke.DaoImpl.JingpinDaoImpl;
 import com.jingpinke.entity.Chapter;
 import com.jingpinke.entity.Course;
 import com.jingpinke.entity.Coursetype;
+import com.jingpinke.entity.Resource;
 import com.jingpinke.indexService.JingpinIIndexService;
 
 public class JingpinIndexServiceImpl implements JingpinIIndexService {
@@ -148,6 +150,87 @@ public class JingpinIndexServiceImpl implements JingpinIIndexService {
 		m.put("src", chapter.get(0)[2].toString());
 		m.put("id", chapter.get(0)[0].toString());
 		m.put("hot",JingpinHost() );
+		return m;
+	}
+
+	@Override
+	public Map JingpinResouce(String id) {
+		String sql = "from Resource where  course.coId="+id+"";
+		List<Resource> list = jingpinDao.JinpinHqlDao(sql);
+		List l = new ArrayList();
+		for(Resource r:list){
+			Map m = new HashMap();
+			m.put("reid", r.getReId());
+			m.put("rename", r.getReName());
+			m.put("reisnative", r.getReIsnative());
+			m.put("resrc", r.getReSrc());
+			m.put("redesc", r.getReDesc());
+			l.add(m);
+		}
+		Map m2= new HashMap();
+		m2.put("re", l);
+		m2.put("coname", coursename(id));
+		m2.put("coid", id);
+		return m2;
+	}
+
+	@Override
+	public Map JingpinTestPaper(String id) {
+		String sql = "SELECT * from testpaper where CO_ID="+id+"";
+		List<Object[]> list = jingpinDao.JinpinSqlDao(sql);
+		List array = new ArrayList();
+		for (Object[] obj : list) {
+			Map hotMap = new HashMap();
+			hotMap.put("tpid", obj[0]);
+			hotMap.put("coid", obj[1]);
+			hotMap.put("tpname", obj[2]);
+			hotMap.put("tpdesc", obj[3]);
+			hotMap.put("tptime", obj[4]);
+			array.add(hotMap);
+		}
+		Map m = new HashMap();
+		m.put("tp", array);
+		m.put("coname", coursename(id));
+		m.put("coid", id);
+		return m;
+	}
+
+	@Override
+	public Map JingpinTaskList(String id) {
+	String sql = "select * from task";
+	List<Object[]> list = jingpinDao.JinpinSqlDao(sql);
+	List array = new ArrayList();
+	for(Object[] o :list){
+		Map m = new HashMap();
+		String sql2 = "select * from taskfile where ta_id ="+o[1]+"";
+		List list2 = jingpinDao.JinpinSqlDao(sql2);
+		if(list2.size()>0){
+			m.put("tayes", "1");
+		}else{
+			m.put("tayes", "0");
+		}
+		m.put("taid", o[0]);
+		m.put("taname", o[2]);
+		m.put("tadesc", o[3]);
+		array.add(m);
+	}
+	Map m = new HashMap();
+	m.put("ta", array);
+	m.put("coname", coursename(id));
+	m.put("coid", id);
+		return m;
+	}
+
+	@Override
+	public Map JingpinTask(String course, String task) {
+		String sql = "select * from task where ta_id="+task+"";
+		List<Object[]> list = jingpinDao.JinpinSqlDao(sql);
+		Map m = new HashMap();
+		m.put("taid", list.get(0)[0]);
+		m.put("taname", list.get(0)[2]);
+		m.put("tadesc", list.get(0)[3]);
+		m.put("coid", course);
+		m.put("coname", coursename(course));
 		return m;
 	}
 }

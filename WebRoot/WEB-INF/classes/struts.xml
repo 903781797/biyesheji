@@ -10,6 +10,10 @@
 	<result name="courseHome">WEB-INF/jsp/index2.jsp</result>
 	<result name="videoList">WEB-INF/jsp/videoList.jsp</result>
 	<result name="video">WEB-INF/jsp/video.jsp</result>
+	<result name="resource">WEB-INF/jsp/resource.jsp</result>
+		<result name="testpaperList">WEB-INF/jsp/testPaperList.jsp</result>
+	<result name="task">WEB-INF/jsp/task.jsp</result>
+	<result name="taskList">WEB-INF/jsp/tasklist.jsp</result>
 	</action>
 	</package>
 </struts>    

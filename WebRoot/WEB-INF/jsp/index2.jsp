@@ -43,10 +43,10 @@
 			<ul class="list-unstyled mysmallmenubody">
 				<li><a href="index_courseHome?courseid=<s:property value="allCourse.course.coid"/>">课程概况</a></li>
 				<li><a href="index_videoList?courseid=<s:property value="allCourse.course.coid"/>">教学录像</a></li>
-				<li><a href="RecourseList.html">教学资源</a></li>
-				<li><a href="testpaperList.html">模拟试题</a></li>
+				<li><a href="index_resource?courseid=<s:property value="allCourse.course.coid"/>">教学资源</a></li>
+		<li><a href="index_testpaper?courseid=<s:property value="allCourse.course.coid"/>">模拟试题</a></li>
 				<li><a href="olineAnswer.html">在线答疑</a></li>
-				<li><a href="taskList.html">作业</a></li>
+			<li><a href="index_taskList?courseid=<s:property value="allCourse.course.coid"/>">作业</a></li>
 			</ul>
 		</div>
 	</div>

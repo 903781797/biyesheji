@@ -48,4 +48,13 @@ public Map JingpinVideoListService(String id);
  * Description: 视频
  */
 public Map JingpinVideoService(String id,String video);
+/**
+ * Writer：zhaoqingchun
+ * Create Date :2016-10-24
+ * Description: 文件下载
+ */
+public Map JingpinResouce(String id);
+public Map JingpinTestPaper(String id);
+public Map JingpinTaskList(String id);
+public Map JingpinTask(String course,String task);
 }
