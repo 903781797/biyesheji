@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%><%@ taglib prefix="s" uri="/struts-tags"%>
 <!--
         	作者：zhaoqingchun163@163.com
         	时间：2016-08-01
@@ -38,10 +38,32 @@
 				</div>
 				<div class="col-lg-2 ">
 					<div class="myloginbtn " id="loginmenu">
+					
+					
+					
+					
+					
+					<s:if test="#session.user!=null"><div class='backoff '>
+		<a href='#' class=' backoff-a glyphicon glyphicon-envelope '>
+		<span class='badge' style='position: absolute; left: 45px;top: 10px; background-color: red;'>42</span>
+		</a>
+		</div>
+		<div class='backoff' onmouseover='displaySubMenu()' onmouseout='hideSubMenu()'>
+		<a href='#'  class='dropdown backoff-a' >
+		<img src='<s:property value="#session.user.ico"/>' width='40px' height='40px' class=' img-circle' />
+		</a>
+
+	<div class='  mymenudown ' id='downmenu'>
+	<div class='myarrow'></div>
+	<div class='downusername'>欢迎您：<s:property value="#session.user.name"/></div>
+	<div class='Setup'><a href='login_center?id=<s:property value="#session.user.id"/>' >个人设置</a><a href='login_out?' style='float: right;' >退出</a></div>
+	</div>
+	</div></s:if><s:else>
 						<div id="loginbtn">
-							<a href="javascript:loginIn();" class="mybtn">登录</a>|
-							<a href="javascript:loginOut();" class="mybtn ">注册</a>
+							<a href="login" class="mybtn">登录</a>|
+							<a href="#" class="mybtn ">注册</a>
 						</div>
+						</s:else>
 					</div>
 				</div>
 			</div>

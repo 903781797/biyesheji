@@ -15,10 +15,14 @@
 	<result name="task">WEB-INF/jsp/task.jsp</result>
 	<result name="taskList">WEB-INF/jsp/tasklist.jsp</result>
 	</action>
-	<action name="login_*" class="loginAction">
-	<result name="login">login.jsp</result>
-	<result name="yes">WEB-INF/jsp/index2.jsp</result>
-	<result name="no">login.jsp</result>
+	<action name="login_*" class="loginAction"  method="{1}">
+	<result name="login">WEB-INF/jsp/login.jsp</result>
+	<result name="yes" type="chain">index</result>
+	<result name="no">WEB-INF/jsp/login.jsp</result>
+	</action>
+	<action name="login" class="loginAction"  method="forword">
+	<result name="no">WEB-INF/jsp/login.jsp</result>
+	<result name="yes" type="chain">index</result>
 	</action>
 	</package>
 </struts>    

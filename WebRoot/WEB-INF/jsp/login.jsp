@@ -155,27 +155,27 @@ $(function(){
 <META name="GENERATOR" content="MSHTML 11.00.9600.17496"></HEAD> 
 <BODY>
 <DIV class="top_div"></DIV>
-<form action="" method="post"  >
+<form action="login_login" method="post"  id="form" >
 <DIV style="background: rgb(255, 255, 255); margin: -100px auto auto; border: 1px solid rgb(231, 231, 231); border-image: none; width: 400px; height: 200px; text-align: center;">
 <DIV style="width: 165px; height: 96px; position: absolute;">
 <DIV class="tou"></DIV>
 <DIV class="initial_left_hand" id="left_hand"></DIV>
 <DIV class="initial_right_hand" id="right_hand"></DIV></DIV>
 <P style="padding: 30px 0px 10px; position: relative;"><SPAN 
-class="u_logo"></SPAN>         <INPUT class="ipt" type="text" placeholder="请输入用户名" value="">
+class="u_logo"></SPAN>         <INPUT class="ipt" type="text" placeholder="请输入用户名" value=""  name="username">
     </P>
 <P style="position: relative;"><SPAN class="p_logo"></SPAN>         
-<INPUT class="ipt" id="password" type="password" placeholder="请输入密码" value="">   
+<INPUT class="ipt" id="password" type="password" placeholder="请输入密码" value="" name="password">   
   </P>
     <p style="margin-top:10px">
-    <input type="radio" name="identity" value="学生" checked="checked" />学生&nbsp&nbsp&nbsp
-    <input type="radio" name="identity" value="教师" />教师&nbsp&nbsp&nbsp
+    <input type="radio" name="juese" value="1" checked="checked" />学生&nbsp&nbsp&nbsp
+    <input type="radio" name="juese" value="0" />教师&nbsp&nbsp&nbsp
     </p>
 <DIV style="height: 50px; line-height: 50px; margin-top: 15px; border-top-color: rgb(231, 231, 231); border-top-width: 1px; border-top-style: solid;">
-<P style="margin: 0px 35px 20px 45px;"> <span style="color:red;">密码错误!</span>
+<P style="margin: 0px 35px 20px 45px;"> <span style="color:red;">${m.info }</span>
            <SPAN style="float: right;">
               <A style="background: rgb(0, 142, 173); padding: 7px 10px; border-radius: 4px; border: 1px solid rgb(26, 117, 152); border-image: none; color: rgb(255, 255, 255); font-weight: bold;" 
-href="">登录</A> 
+href="javascript:document.getElementById('form').submit()">登录</A> 
            </SPAN>         </P></DIV></DIV>
 		   <div style="text-align:center;">
 

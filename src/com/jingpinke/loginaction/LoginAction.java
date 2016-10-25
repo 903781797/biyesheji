@@ -1,6 +1,6 @@
 package com.jingpinke.loginaction;
 
-import java.sql.Driver;
+import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -46,23 +46,46 @@ public void setLoginService(LoginService loginService) {
 	this.loginService = loginService;
 }
 
-public String login(){
+public String out(){
+	session.remove("user");
+	return "no";
+}
+public String forword(){
 	if(session.get("user")!=null){
 		return "yes";
 	}
+	return "no";
+}
+public String login(){
+
 	if(juese.equals("1")){
 		Map m1= loginService.student_login(username, password);
 		if(m1==null){
+			m=new HashMap();
 			m.put("info", "用户名或密码错误");
+			return "no";
 		}else{
+			
 			m=m1;
+			m.put("shenfen", "student");
+			session.put("user", m);
 			return "yes";
 		}
 	}else{
-		
+		Map m1= loginService.teacher_login(username, password);
+		if(m1==null){
+			m=new HashMap();
+			m.put("info", "用户名或密码错误");
+			return "no";
+		}else{
+			m=m1;
+			m.put("shenfen", "teacher");
+			session.put("user", m);
+			return "manager";
+		}
 	}
 	
-	return "success";
+
 }
 private Map session ;
 @Override
