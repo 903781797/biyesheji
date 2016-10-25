@@ -233,4 +233,10 @@ public class JingpinIndexServiceImpl implements JingpinIIndexService {
 		m.put("coname", coursename(course));
 		return m;
 	}
+
+	@Override
+	public Map JingpinAnswerAll() {
+		String sql ="";
+		return null;
+	}
 }

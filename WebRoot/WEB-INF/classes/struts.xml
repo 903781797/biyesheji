@@ -15,5 +15,10 @@
 	<result name="task">WEB-INF/jsp/task.jsp</result>
 	<result name="taskList">WEB-INF/jsp/tasklist.jsp</result>
 	</action>
+	<action name="login_*" class="loginAction">
+	<result name="login">login.jsp</result>
+	<result name="yes">WEB-INF/jsp/index2.jsp</result>
+	<result name="no">login.jsp</result>
+	</action>
 	</package>
 </struts>    

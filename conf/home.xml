@@ -15,4 +15,10 @@
 	<bean name="indexAction" class="com.jingpinke.indexAction.IndexAction">
 	<property name="jingpinIndexService" ref="jingpinIndexService"></property>
 	</bean>
+	<bean name="loginAction" class="com.jingpinke.loginaction.LoginAction">
+	<property name="loginService" ref="loginService"></property>
+	</bean>
+	<bean name="loginService" class="com.jingpinke.loginserviceImpl.LoginServiceImpl">
+		<property name="jingpinDao" ref = "jingpinDao"></property>
+	</bean>
 </beans>

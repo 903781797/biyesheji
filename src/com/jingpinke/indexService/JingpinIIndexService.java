@@ -57,4 +57,5 @@ public Map JingpinResouce(String id);
 public Map JingpinTestPaper(String id);
 public Map JingpinTaskList(String id);
 public Map JingpinTask(String course,String task);
+public Map JingpinAnswerAll();
 }
