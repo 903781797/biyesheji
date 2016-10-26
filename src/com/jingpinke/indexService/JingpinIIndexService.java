@@ -54,8 +54,29 @@ public Map JingpinVideoService(String id,String video);
  * Description: 文件下载
  */
 public Map JingpinResouce(String id);
+/**
+ * Writer：zhaoqingchun
+ * Create Date :2016-10-24
+ * Description: 试卷
+ */
 public Map JingpinTestPaper(String id);
+/**
+ * Writer：zhaoqingchun
+ * Create Date :2016-10-24
+ * Description: 作业列表
+ */
 public Map JingpinTaskList(String id);
+/**
+ * Writer：zhaoqingchun
+ * Create Date :2016-10-24
+ * Description: 作业
+ */
 public Map JingpinTask(String course,String task);
+/**
+ * Writer：zhaoqingchun
+ * Create Date :2016-10-24
+ * Description: 答疑社区
+ */
 public Map JingpinAnswerAll();
+
 }

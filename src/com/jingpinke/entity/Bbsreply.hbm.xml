@@ -8,7 +8,7 @@
     <class name="com.jingpinke.entity.Bbsreply" table="bbsreply" catalog="jingpinke">
         <id name="brId" type="java.lang.Integer">
             <column name="BR_ID" />
-            <generator class="assigned" />
+            <generator class="identity" />
         </id>
         <many-to-one name="user" class="com.jingpinke.entity.User" fetch="select">
             <column name="US_ID" />

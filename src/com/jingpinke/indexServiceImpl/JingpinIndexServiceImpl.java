@@ -236,7 +236,14 @@ public class JingpinIndexServiceImpl implements JingpinIIndexService {
 
 	@Override
 	public Map JingpinAnswerAll() {
-		String sql ="";
+		String remen ="SELECT a1. * , a2.coun, a3.bt_id, a3.bt_name FROM  `bbstype` a3,  `bbscard` a1"
+				+ " LEFT JOIN ( SELECT br_id, bc_id, COUNT( * ) coun FROM  `bbsreply` GROUP BY bc_id )a2 "
+				+ "ON a1.bc_id = a2.bc_id WHERE a3.bt_id = a1.bt_id AND a1.bc_istrue =1 ORDER BY a2.coun DESC "
+				+ "LIMIT 0 , 11";                    //查询热门答疑前11条
+		String fenlei="SELECT a1.bt_id, a1.co_id, a1.bt_name, a1.bt_ico, a2.coun FROM  `bbstype` a1 "
+				+ "LEFT JOIN ( SELECT bt_id, bc_id, COUNT( bc_id ) coun FROM bbscard "
+				+ "GROUP BY bt_id )a2 ON a1.bt_id = a2.bt_id";        //查询分类
+		String teacher ="";
 		return null;
 	}
 }
