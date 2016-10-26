@@ -19,7 +19,7 @@
 								<h4>所有课程</h4></a>
 						</li>
 						<li>
-							<a href="answerBigList.html">
+							<a href="index_dayi">
 								<h4>答疑</h4></a>
 						</li>
 						<li>

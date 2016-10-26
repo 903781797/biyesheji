@@ -12,6 +12,7 @@ import com.jingpinke.entity.Course;
 import com.jingpinke.entity.Coursetype;
 import com.jingpinke.entity.Resource;
 import com.jingpinke.indexService.JingpinIIndexService;
+import com.jingpinke.util.Util;
 
 public class JingpinIndexServiceImpl implements JingpinIIndexService {
 	private JingpinIDao jingpinDao;
@@ -236,14 +237,53 @@ public class JingpinIndexServiceImpl implements JingpinIIndexService {
 
 	@Override
 	public Map JingpinAnswerAll() {
-		String remen ="SELECT a1. * , a2.coun, a3.bt_id, a3.bt_name FROM  `bbstype` a3,  `bbscard` a1"
+		String remen ="SELECT a1.BC_ID, a1.BC_TITLE, a1.BC_DATE, a1.BT_ID, a2.coun, a3.bt_name FROM  `bbstype` a3,  `bbscard` a1"
 				+ " LEFT JOIN ( SELECT br_id, bc_id, COUNT( * ) coun FROM  `bbsreply` GROUP BY bc_id )a2 "
-				+ "ON a1.bc_id = a2.bc_id WHERE a3.bt_id = a1.bt_id AND a1.bc_istrue =1 ORDER BY a2.coun DESC "
+				+ "ON a1.bc_id = a2.bc_id WHERE a3.bt_id = a1.bt_id AND a1.bc_istrue =1 ORDER BY a1.BC_DATE desc "
 				+ "LIMIT 0 , 11";                    //查询热门答疑前11条
+		Map map = new HashMap();
+		List<Object[]> remenlist = jingpinDao.JinpinSqlDao(remen);
+		List list = new ArrayList();
+		for(Object[] o:remenlist){
+			Map m = new HashMap();
+			m.put("bcid", Util.isNull(o[0]));
+			m.put("bctitle", Util.isNull(o[1]));
+			m.put("bcdate", Util.isNull(o[2]));
+			m.put("btid", Util.isNull(o[3]));
+			m.put("coun", Util.isNull(o[4]));
+			m.put("btname", Util.isNull(o[5]));
+			list.add(m);
+		}
+		map.put("remen",list);
 		String fenlei="SELECT a1.bt_id, a1.co_id, a1.bt_name, a1.bt_ico, a2.coun FROM  `bbstype` a1 "
 				+ "LEFT JOIN ( SELECT bt_id, bc_id, COUNT( bc_id ) coun FROM bbscard "
 				+ "GROUP BY bt_id )a2 ON a1.bt_id = a2.bt_id";        //查询分类
-		String teacher ="";
-		return null;
+		remenlist = jingpinDao.JinpinSqlDao(fenlei);
+		List list2 = new ArrayList();
+		for(Object[] o:remenlist){
+			Map m = new HashMap();
+			m.put("bcid", Util.isNull(o[0]));
+			m.put("coid", Util.isNull(o[1]));
+			m.put("btname", Util.isNull(o[2]));
+			m.put("btico", Util.isNull(o[3]));
+			m.put("coun", Util.isNull(o[4]));
+			list2.add(m);
+		}
+		map.put("fenlei", list2);
+		String teacher ="select a1.ma_name,a1.ma_id,a1.ma_ico,a2.coun from manager a1 left join"
+				+ " (select ma_id, count(br_id) coun from bbsreply group by ma_id) a2 on a1.ma_id = a2.ma_id "
+				+ "order by a2.coun desc";    //查询热门教师  
+		remenlist = jingpinDao.JinpinSqlDao(teacher);
+		List list3 = new ArrayList();
+		for(Object[] o:remenlist){
+			Map m = new HashMap();
+			m.put("maname", Util.isNull(o[0]));
+			m.put("maid", Util.isNull(o[1]));
+			m.put("maico", Util.isNull(o[2]));
+			m.put("coun", Util.isNull(o[3]));
+			list3.add(m);
+		}
+		map.put("teacher", list3);
+		return map;
 	}
 }

@@ -65,50 +65,17 @@
 						</span>
 					</div>
 					<ul class="list-unstyled">
+					<s:iterator value="allCourse.remen">
+						<li>
+							<a href="<s:property value="btid"/>" class="type">[<s:property value="btname"/>]</a>
+							<a href="<s:property value="bcid"/>"><s:property value="bctitle"/></a><span class="ans-time"><s:property value="bcdate.substring(0,10)"/></span>
+						</li>
+						</s:iterator>
 						<li>
 							<a href="#" class="type">[数据库系统]</a>
 							<a href="#">请问如何在linux下部署oracle</a><span class="ans-time">2016年12月24日</span>
 						</li>
-						<li>
-							<a href="#" class="type">[数据库系统]</a>
-							<a href="#">请问如何在linux下部署oracle</a><span class="ans-time">2016年12月24日</span>
-						</li>
-						<li>
-							<a href="#" class="type">[数据库系统]</a>
-							<a href="#">请问如何在linux下部署oracle</a><span class="ans-time">2016年12月24日</span>
-						</li>
-						<li>
-							<a href="#" class="type">[数据库系统]</a>
-							<a href="#">请问如何在linux下部署oracle</a><span class="ans-time">2016年12月24日</span>
-						</li>
-						<li>
-							<a href="#" class="type">[数据库系统]</a>
-							<a href="#">请问如何在linux下部署oracle</a><span class="ans-time">2016年12月24日</span>
-						</li>
-						<li>
-							<a href="#" class="type">[数据库系统]</a>
-							<a href="#">请问如何在linux下部署oracle</a><span class="ans-time">2016年12月24日</span>
-						</li>
-						<li>
-							<a href="#" class="type">[数据库系统]</a>
-							<a href="#">请问如何在linux下部署oracle</a><span class="ans-time">2016年12月24日</span>
-						</li>
-						<li>
-							<a href="#" class="type">[数据库系统]</a>
-							<a href="#">请问如何在linux下部署oracle</a><span class="ans-time">2016年12月24日</span>
-						</li>
-						<li>
-							<a href="#" class="type">[数据库系统]</a>
-							<a href="#">请问如何在linux下部署oracle</a><span class="ans-time">2016年12月24日</span>
-						</li>
-						<li>
-							<a href="#" class="type">[数据库系统]</a>
-							<a href="#">请问如何在linux下部署oracle</a><span class="ans-time">2016年12月24日</span>
-						</li>
-						<li>
-							<a href="#" class="type">[数据库系统]</a>
-							<a href="#">请问如何在linux下部署oracle</a><span class="ans-time">2016年12月24日</span>
-						</li>
+						
 						
 					</ul>
 				</div>
@@ -126,7 +93,22 @@
 							<a href="#" >更多</a>
 						</span>
 					</div>
+<s:iterator value="allCourse.teacher">
+					<div class="teindex te_list">
+						<div class="fl-left">
+							<img class="img-circle" src="<s:property value="maico"/>" width="45px" height="45px" />
+						</div>
+						<div class="fl-left">
+							<a href="<s:property value="maid"/>">
+								<p class="com-content">
+									<span class="glyphicon glyphicon-user userico"></span><s:property value="maname"/>
+								</p>
+								<p class="help-block">回答：<s:property value="coun"/></p>
+							</a>
+						</div>
 
+					</div>
+					</s:iterator>
 					<div class="teindex te_list">
 						<div class="fl-left">
 							<img class="img-circle" src="img/touxiang.png" width="45px" height="45px" />
@@ -141,63 +123,7 @@
 						</div>
 
 					</div>
-					
-					<div class="teindex te_list">
-						<div class="fl-left">
-							<img class="img-circle" src="img/touxiang.png" width="45px" height="45px" />
-						</div>
-						<div class="fl-left">
-							<a href="#">
-								<p class="com-content">
-									<span class="glyphicon glyphicon-user userico"></span>阿萨德发生
-								</p>
-								<p class="help-block">回答：100</p>
-							</a>
-						</div>
-
-					</div>
-					<div class="teindex te_list">
-						<div class="fl-left">
-							<img class="img-circle" src="img/touxiang.png" width="45px" height="45px" />
-						</div>
-						<div class="fl-left">
-							<a href="#">
-								<p class="com-content">
-									<span class="glyphicon glyphicon-user userico"></span>阿萨德发生
-								</p>
-								<p class="help-block">回答：100</p>
-							</a>
-						</div>
-
-					</div>
-					<div class="teindex te_list">
-						<div class="fl-left">
-							<img class="img-circle" src="img/touxiang.png" width="45px" height="45px" />
-						</div>
-						<div class="fl-left">
-							<a href="#">
-								<p class="com-content">
-									<span class="glyphicon glyphicon-user userico"></span>阿萨德发生
-								</p>
-								<p class="help-block">回答：100</p>
-							</a>
-						</div>
-
-					</div>
-					<div class="teindex te_list">
-						<div class="fl-left">
-							<img class="img-circle" src="img/touxiang.png" width="45px" height="45px" />
-						</div>
-						<div class="fl-left">
-							<a href="#">
-								<p class="com-content">
-									<span class="glyphicon glyphicon-user userico"></span>阿萨德发生
-								</p>
-								<p class="help-block">回答：100</p>
-							</a>
-						</div>
-
-					</div>
+				
 
 				</div>
 			</div>
@@ -213,13 +139,15 @@
 					</div>
 					<div class="clearfl " id="an_type">
 						<div class="borderxx">
+						<s:iterator value="allCourse.fenlei">
 							<div class="col-lg-6">
-								<div class="fl-left"><img src="img/touxiang.png" width="70px" height="70px"></div>
+								<div class="fl-left"><img src="<s:property value="btico"/>" width="70px" height="70px"></div>
 								<div class="fl-left">
-								<p class="typename">这个是题目</p>
-								<p class="typehelp">帖数:11111</p>
+								<p class="typename"><s:property value="btname"/></p>
+								<p class="typehelp">帖数:<s:property value="coun"/></p>
 								</div>
 							</div>
+							</s:iterator>
 							<div class="col-lg-6">
 								<div class="fl-left"><img src="img/touxiang.png" width="70px" height="70px"></div>
 								<div class="fl-left">

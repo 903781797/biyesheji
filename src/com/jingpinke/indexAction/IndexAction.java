@@ -74,6 +74,10 @@ public class IndexAction extends ActionSupport {
     	allCourse = jingpinIndexService.JingpinTask(courseid, videoid);
     	return "task";
     }
+    public String dayi(){
+    	allCourse = jingpinIndexService.JingpinAnswerAll();
+    	return "dayi";
+    }
 	public Map getAllCourse() {
 		return allCourse;
 	}

@@ -11,9 +11,10 @@
 	<result name="videoList">WEB-INF/jsp/videoList.jsp</result>
 	<result name="video">WEB-INF/jsp/video.jsp</result>
 	<result name="resource">WEB-INF/jsp/resource.jsp</result>
-		<result name="testpaperList">WEB-INF/jsp/testPaperList.jsp</result>
+	<result name="testpaperList">WEB-INF/jsp/testPaperList.jsp</result>
 	<result name="task">WEB-INF/jsp/task.jsp</result>
 	<result name="taskList">WEB-INF/jsp/tasklist.jsp</result>
+	<result name="dayi">WEB-INF/jsp/answerBigList.jsp</result>
 	</action>
 	<action name="login_*" class="loginAction"  method="{1}">
 	<result name="login">WEB-INF/jsp/login.jsp</result>
