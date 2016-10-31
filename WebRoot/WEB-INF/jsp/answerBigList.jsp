@@ -156,7 +156,7 @@
 
 					<s:iterator value="allCourse.fenlei">
 						<a href="#">
-							<div class="col-lg-6">
+							<div class="col-lg-6" style="overflow:hidden; margin-bottom:20px">
 								<div class="fl-left">
 									<img src="<s:property value="btico"/>" width="70px"
 										height="70px">
@@ -169,6 +169,7 @@
 										帖数:
 										<s:property value="coun" />
 									</p>
+								</div>
 								</div>
 						</a>
 					</s:iterator>

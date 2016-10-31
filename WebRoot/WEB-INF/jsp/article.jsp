@@ -19,11 +19,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<script type="text/javascript" charset="utf-8" src="umeditor/umeditor.config.js"></script>
 		<script type="text/javascript" charset="utf-8" src="umeditor/umeditor.min.js"></script>
 		<script type="text/javascript" src="umeditor/lang/zh-cn/zh-cn.js"></script>
+		<link rel="stylesheet"
+	href="bootstrap-3.3.5-dist/css/bootstrap.min.css"
+	type="text/css" />
+<link rel="stylesheet" href="css/index.css" />
+<script src="js/jquery.min.js"></script>
+<script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/video-js.css" />
+<script type="text/javascript" src="/js/video.js"></script>
+<script src="js/userMenu.js"></script>
+<link rel="stylesheet" href="css/index2.css" />
 	</head>
 
 	<body style="background-color: #EBEBEB;">
 	<%@ include file="commen/head.jsp"%>
-		<div class="container">
+		<div class="container in_margin">
 			<div style="background-color: #FFFFFF;" class="yuanjiao">
 				<div class="col-lg-12 bgblack">
 					<div class="col-lg-2"> <span class="huifu">回复：<s:if test="map.pl!=''null"><s:property value="map.pl.size()"/></s:if></span></div>
@@ -42,7 +52,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div class="col-lg-10 aborder" style="padding-top: 30px ; font-size: 16px;">
 						<div class="col-lg-12 apadding">
 							<h2 style="text-align: center;"><s:property value="map.bctitle"/></h2></div>
-						<div class="col-lg-12 apadding2" style="text-align: center;">日期：<s:property value="map.bcdate.substring(0,10)"/></div>
+						<div class="col-lg-12 apadding2" style="text-align: center;">日期：<s:property value="map.bcdate"/></div>
 						<div class="col-lg-12 apadding2"><s:property value="map.bccontent"/></div>
 						
 					</div>
@@ -67,7 +77,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</div>
 
 						<div class="col-lg-10 aborder" style=" font-size: 16px; ">
-							<div class="col-lg-12 apadding " style="border-bottom: 1px dashed #ddd"><s:property value="cd" /><span style="float: right; color: #9AC200;">#<%=i %></span></div>
+							<div class="col-lg-12 apadding " style="border-bottom: 1px dashed #ddd"><s:property value=" madate"/><span style="float: right; color: #9AC200;">#<%=i %></span></div>
 							<div class="col-lg-12 apadding2" style="text-align: center;">
 								<s:property value="brcontent" />
 							</div>
@@ -79,15 +89,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 			</div>
 		</s:iterator>
-		<s:if test="#session.user.shenfen!='teacher'">
-			<div class="container">
-				<div style="background-color: #FFFFFF; margin: 20; text-align: center; line-height: 100px;border: 1px dashed #ddd">
-					登陆后可以发表评论</div>
-
-			</div>
-		</s:if>
-		<s:else>
-
+		<s:if test="#session.user.shenfen=='teacher'">
 			<div class="container">
 				<div style="background-color: #FFFFFF;" class="yuanjiao">
 
@@ -113,6 +115,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 
 			</div>
+		</s:if>
+		<s:else>
+
+			
 
 		</s:else>
 

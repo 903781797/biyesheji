@@ -48,8 +48,9 @@ public class JingpinArticleServiceImpl implements JingpinIArticleService {
 				m.put("maid", wenzhang1.get(i)[1]);
 				m.put("bcid", wenzhang1.get(i)[2]);
 				m.put("brcontent", wenzhang1.get(i)[3]);
-				m.put("maico", wenzhang1.get(i)[4]);
-				m.put("ma_name", Util.isNull(wenzhang1.get(i)[5]));
+				m.put("madate", wenzhang1.get(i)[4]);
+				m.put("maico", wenzhang1.get(i)[5]);
+				m.put("maname", Util.isNull(wenzhang1.get(i)[6]));
 				list.add(m);
 			}
 			wen.put("pl", list);

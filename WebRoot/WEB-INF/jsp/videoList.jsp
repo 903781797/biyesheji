@@ -67,7 +67,7 @@
 
 						<div class="vl-chapter borderbottom">
 							<a class="vl-block" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-								第一章：这是第一张内容<span class=" vl-addico ">+</span>
+								课程目录：<span class=" vl-addico ">+</span>
 							</a>
 							<div id="collapse1" class="vl-section collapse in">
 								<ul class="list-unstyled vl-ul">

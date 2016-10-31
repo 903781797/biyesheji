@@ -84,7 +84,7 @@
 					
 					<ul class="list-unstyled ">
 						<li class="mymenu-title"><s:property value="allCourse.coname"/> </li>
-						<li class="mymeny-chapter">1.1第一章 乐福托尔斯泰</li>
+						<li class="mymeny-chapter">课程目录：</li>
 						<s:iterator value="allCourse.videoList">
 						<li class="mymeny-section ">
 							<a href='index_video?courseid=<s:property value="allCourse.coid"/>&videoid=<s:property value="id"/>' <s:if test="id==%{callCourse.id}">style="color: #92ac00;"</s:if>><span class="glyphicon glyphicon-play mymenuico"></span>

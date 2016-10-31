@@ -12,7 +12,11 @@ private Map map;
 
 public String getArticle(){
 	map = articleService.getArtice(articleId);
+	System.out.println(map);
 	return "article";
+}
+public String getList(){
+	return "articleList";
 }
 
 public Map getMap() {

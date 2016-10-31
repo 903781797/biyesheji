@@ -71,7 +71,7 @@
 						<!--<video id="my-video" class="video-js vjs-big-play-centered "
 							width="300px" height="200px" controls preload="auto"
 							data-setup=""> <!--poster=""--> <source src="video/1.mp4"
-							type='video/mp4' /> </video>-->
+							type='video/mp4' /> </video>
 					</div>
 					<div class="title-content col-lg-8">
 						<h2><s:property value="allCourse.course.coname"/></h2>

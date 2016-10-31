@@ -27,6 +27,7 @@
 	</action>
 	<action name="article_*" class="articleAction" method="{1}">
 	<result name="article">WEB-INF/jsp/article.jsp</result>
+	<result name="articleList">WEB-INF/jsp/articleList.jsp</result>
 	</action>
 	</package>
 </struts>    
