@@ -21,4 +21,10 @@
 	<bean name="loginService" class="com.jingpinke.loginserviceImpl.LoginServiceImpl">
 		<property name="jingpinDao" ref = "jingpinDao"></property>
 	</bean>
+	<bean name="jingpinArticleService" class="com.jingpinke.acticleServiceImpl.JingpinArticleServiceImpl">
+	<property name="jingpinDao" ref = "jingpinDao"></property>
+	</bean>
+	<bean name="articleAction" class="com.jingpinke.article.ArticleAction">
+	<property name="articleService" ref="jingpinArticleService"></property>
+	</bean>
 </beans>

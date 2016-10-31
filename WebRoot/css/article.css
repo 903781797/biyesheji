@@ -1,0 +1,63 @@
+.bgblack{
+	background-color: #333333;
+}
+.orderTitle{
+	height: 40px;
+
+	
+}
+.orderTitle h1{
+	color: #FFFFFF;
+	font-size: 18px;
+		line-height: 50px;
+}
+.bianju{
+	margin: 20px 0px;
+}
+.yuanjiao{
+	border-radius:15px;
+}
+.apadding{
+	padding: 10px 0 10px 0;
+}
+.apadding2{
+	padding: 10px 0 30px 0;
+}
+.huifu{
+	color: #FFFFFF;
+	line-height: 40px;
+}
+.aborder{
+	 border-left: 1px solid #ddd;
+}
+.pinglun{
+	padding: 10px;
+	width: 100%;
+	background-color: #FFFFFF;
+	margin-bottom: 10px;
+}
+.coursemapping{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	
+	
+}
+.courseborder{
+	border: solid 1px #ddd;
+	height: 60px; background-color: #e5e2d3; border-radius: 5px;
+}
+.courseGezi{
+	width: 200px; margin: 10px; height: 60px; line-height: 60px;
+	
+	float: left;
+}
+.suoyoukecheng{
+	width: 100% ; height: 40px; background-color: #5f9eaf; padding-left: 10px; line-height: 40px; color: #FFFFFF;
+	font-size: 16px;
+}
+.courseborder:hover{
+	background-color: #FFFFFF;
+}
+.pian{
+	float: right; line-height: 60px; font-size: 12px; 
+}
