@@ -89,7 +89,7 @@
 				<div class="col-lg-3">
 					<a href="index_courseHome?courseid=<s:property value="coid"/>">
 						<div class="coursebox">
-							<img src="<s:property value="coimg"/>" class="img-responsive" />
+							<img src="<s:property value="coimg"/>" class="img-responsive"  />
 							<p>
 								<s:property value="coname" />
 							</p>

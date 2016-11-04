@@ -83,8 +83,7 @@
 									value="bctitle" /></a><span class="ans-time"><s:property
 									value="bcdate.substring(0,10)" /></span></li>
 					</s:iterator>
-					<li><a href="#" class="type">[数据库系统]</a> <a href="#">请问如何在linux下部署oracle</a><span
-						class="ans-time">2016年12月24日</span></li>
+				
 
 
 				</ul>
@@ -123,23 +122,6 @@
 
 					</div>
 				</s:iterator>
-				<div class="teindex te_list">
-					<div class="fl-left">
-						<img class="img-circle" src="img/touxiang.png" width="45px"
-							height="45px" />
-					</div>
-					<div class="fl-left">
-						<a href="#">
-							<p class="com-content">
-								<span class="glyphicon glyphicon-user userico"></span>阿萨德发生
-							</p>
-							<p class="help-block">回答：100</p>
-						</a>
-					</div>
-
-				</div>
-
-
 			</div>
 		</div>
 		<!--
@@ -155,7 +137,7 @@
 				<div class="clearfl " id="an_type">
 
 					<s:iterator value="allCourse.fenlei">
-						<a href="#">
+						<a href="article_getList?articleId=<s:property value="btid"/>">
 							<div class="col-lg-6" style="overflow:hidden; margin-bottom:20px">
 								<div class="fl-left">
 									<img src="<s:property value="btico"/>" width="70px"

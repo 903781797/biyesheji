@@ -28,4 +28,19 @@ public class JingpinDaoImpl implements JingpinIDao {
 		Query q = sf.getCurrentSession().createQuery(hql);
 		return q.list();
 	}
+
+	@Override
+	public int sizeSql(String sql) {
+		Query q = sf.getCurrentSession().createSQLQuery(sql);
+		int size =q.list().size();
+		return size;
+	}
+
+	@Override
+	public int sizeHql(String hql) {
+		Query q = sf.getCurrentSession().createQuery(hql);
+		int size =q.list().size();
+		return size;
+	}
+
 }

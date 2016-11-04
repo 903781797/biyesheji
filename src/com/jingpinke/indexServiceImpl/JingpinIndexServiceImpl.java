@@ -262,7 +262,7 @@ public class JingpinIndexServiceImpl implements JingpinIIndexService {
 		List list2 = new ArrayList();
 		for(Object[] o:remenlist){
 			Map m = new HashMap();
-			m.put("bcid", Util.isNull(o[0]));
+			m.put("btid", Util.isNull(o[0]));
 			m.put("coid", Util.isNull(o[1]));
 			m.put("btname", Util.isNull(o[2]));
 			m.put("btico", Util.isNull(o[3]));

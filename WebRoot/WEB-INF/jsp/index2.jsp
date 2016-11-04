@@ -75,7 +75,7 @@
 					</div>
 					<div class="title-content col-lg-8">
 						<h2><s:property value="allCourse.course.coname"/></h2>
-						<p class="myintroduction"><s:property value="allCourse.course.coi "/></p>
+						<p class="myintroduction"><s:property value="allCourse.course.codesc "/></p>
 					</div>
 				</div>
 			</div>
@@ -90,7 +90,8 @@
 				<div class="myborder myspacing bgwrite">
 					<div class="texttitle" id="section-1">课程描述</div>
 					<div class="content">
-						<s:property value="allCourse.course.codesc "/>
+						
+						<s:property value="allCourse.course.coi "/>
 					</div>
 					<div class="texttitle" id="section-2">预备知识</div>
 					<div class="content"><s:property value="allCourse.course.coknow "/></div>
@@ -99,22 +100,7 @@
 					<s:iterator value="allCourse.chapter">
 						<p class="chapter"><s:property value="name"/></p>
 					</s:iterator>
-						<h4>1. 什么是设计</h4>
 					
-						<p class="chapter">1.2 什么是设计</p>
-						<p class="chapter">1.3 设计的几个性质</p>
-						<h4>2. 什么是好设计</h4>
-						<p class="chapter">2.1 你心目中的好设计</p>
-						<p class="chapter">2.2 好设计的标准</p>
-						<p class="chapter">2.3 好设计的价值</p>
-						<h4>1. 什么是设计</h4>
-						<p class="chapter">1.1 为什么说人人爱设计</p>
-						<p class="chapter">1.2 什么是设计</p>
-						<p class="chapter">1.3 设计的几个性质</p>
-						<h4>2. 什么是好设计</h4>
-						<p class="chapter">2.1 你心目中的好设计</p>
-						<p class="chapter">2.2 好设计的标准</p>
-						<p class="chapter">2.3 好设计的价值</p>
 					</div>
 					<!--contentend-->
 					<div class="texttitle" id="section-4">授课教师</div>

@@ -5,8 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+
 import com.jingpinke.Dao.JingpinIDao;
 import com.jingpinke.acticleService.JingpinIArticleService;
+import com.jingpinke.model.Page;
 import com.jingpinke.util.Util;
 
 public class JingpinArticleServiceImpl implements JingpinIArticleService {
@@ -57,4 +61,33 @@ public class JingpinArticleServiceImpl implements JingpinIArticleService {
 		}
 		return wen;
 	}
+
+	@Override
+	public JSONObject getList(String id , Page page) {
+	   
+	    String sizesql = "select * from bbscard  where BT_ID = "+id+"";
+	    int size1 = jingpinDao.sizeSql(sizesql);
+	    page.setTotalRecord(size1);
+	    String sql = "SELECT c.BC_ID,c.US_ID,c.BC_TITLE,c.BC_DATE,u.US_ICO,u.US_NAME from bbscard c,`user` u"
+	    		+ " where BT_ID = "+id+" and u.US_ID=c.US_ID limit "+page.getStartIndex()+", "+page.getEndIndex()+"";
+	    List<Object[]> list = jingpinDao.JinpinSqlDao(sql);
+	    int size = list.size();
+	    JSONArray l = new JSONArray();
+	    for(int i=0;i<size;i++ ) {
+	    	JSONObject m = new JSONObject();
+	    	m.put("bcid", list.get(i)[0]);
+	    	m.put("usid", list.get(i)[1]);
+	    	m.put("bctitle", list.get(i)[2]);
+	    	String s = list.get(i)[3].toString();
+	    	m.put("bcdate", (s).substring(0, 10));
+	    	m.put("usico", list.get(i)[4]);
+	    	m.put("usname", list.get(i)[5]);
+	    	l.add(m);
+	    }
+	    JSONObject m = new JSONObject();
+	    m.put("page", page);
+	    m.put("artice", l);
+		return m;
+	}
+
 }

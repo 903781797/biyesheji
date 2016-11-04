@@ -44,7 +44,7 @@
 				<li><a href="index_videoList?courseid=<s:property value="allCourse.coid"/>">教学录像</a></li>
 				<li><a href="index_resource?courseid=<s:property value="allCourse.coid"/>">教学资源</a></li>
 		       <li><a href="index_testpaper?courseid=<s:property value="allCourse.coid"/>">模拟试题</a></li>
-				<li><a href="olineAnswer.html">在线答疑</a></li>
+				<li><a href="index_dayi?courseid=<s:property value="allCourse.coid"/>">在线答疑</a></li>
 			<li><a href="index_taskList?courseid=<s:property value="allCourse.coid"/>">作业</a></li>
 			</ul>
 		</div>

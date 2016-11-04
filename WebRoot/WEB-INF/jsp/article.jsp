@@ -43,7 +43,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div class="col-lg-12" style="background: #FFFFFF; margin-bottom: 15px;">
 					<div class="col-lg-2 bianju" style=" margin: 0; ">
 						<div style="padding-left: 5px; padding-top: 50px;">
-							<img src="<s:property value=" map.usico "/>" class="media-object  img-circle" style="" /></div>
+							<img src="<s:property value=" map.usico "/>" class="media-object  img-circle" style="max-width:100px"  /></div>
 						<br />
 						<p style="text-align: center;"><s:property value="map.usname" /></p>
 						<p style="text-align: center;">楼主</p>
@@ -69,7 +69,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div class="col-lg-12" style="background: #FFFFFF; margin-bottom: 15px;">
 						<div class="col-lg-2 bianju" style=" margin: 0; ">
 							<div style="padding-left: 5px; padding-top: 50px;">
-								<img src="<s:property value=" maico "/>" class="media-object  img-circle" style="" /></div>
+								<img src="<s:property value=" maico "/>" class="media-object  img-circle" style="max-width:100px" /></div>
 							<br />
 							<p style="text-align: center;"><s:property value="maname" /></p>
 							<p style="text-align: center;">
@@ -121,7 +121,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			
 
 		</s:else>
-
+	<%@ include file="commen/footer.jsp"%>
 	</body>
 	<script>
 		var um2 = document.getElementById('myEditor');

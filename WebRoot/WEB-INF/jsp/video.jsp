@@ -88,7 +88,7 @@
 						<s:iterator value="allCourse.videoList">
 						<li class="mymeny-section ">
 							<a href='index_video?courseid=<s:property value="allCourse.coid"/>&videoid=<s:property value="id"/>' <s:if test="id==%{callCourse.id}">style="color: #92ac00;"</s:if>><span class="glyphicon glyphicon-play mymenuico"></span>
-							<%=i++ %><s:property value="name"/> <span class="menutime">59分钟</span></a>
+							<%=i++ %><s:property value="name"/> </a>
 						</li>
 					</s:iterator >					
 					</ul>
