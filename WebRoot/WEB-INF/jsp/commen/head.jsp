@@ -29,17 +29,18 @@
 
 					</ul>
 				</div>
-
+				<form action="article_search" style="margin:0px">
 				<div class="col-lg-3">
 					<div class="serchbody ">
-						<input type="text" id="serch" class=" myserch mytext" placeholder="按课程名搜索" />
-						<input type="button" class=" myserch btntext" value="搜" />
+						<input type="text" id="serch" class=" myserch mytext" placeholder="按课程名搜索" name="articleId" />
+						<input type="submit" class=" myserch btntext" value="搜" />
 					</div>
 				</div>
+				</form>
 				<div class="col-lg-2 ">
 					<div class="myloginbtn " id="loginmenu">
 					
-					
+				
 					
 					
 					

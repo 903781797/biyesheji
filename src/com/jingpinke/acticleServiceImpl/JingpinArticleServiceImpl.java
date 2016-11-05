@@ -90,4 +90,26 @@ public class JingpinArticleServiceImpl implements JingpinIArticleService {
 		return m;
 	}
 
+	@Override
+	public JSONObject search(String name) {
+		String sql = "SELECT course.co_id, course.co_name, course.co_Desc, course.co_img, COUNT( study.ST_ID ) "
+				+ "FROM course LEFT JOIN study ON study.CO_ID = course.CO_ID WHERE course.co_name LIKE  "
+				+ "'%"+name+"%' GROUP BY course.co_id ORDER BY course.co_date DESC , course.co_id  ";
+		List<Object[]> jieguo = jingpinDao.JinpinSqlDao(sql);
+		List array = new ArrayList();
+		for (Object[] obj : jieguo) {
+			Map hotMap = new HashMap();
+			hotMap.put("coid", obj[0]);
+			hotMap.put("coname", obj[1]);
+			hotMap.put("codesc", obj[2]);
+			hotMap.put("coimg", obj[3]);
+			hotMap.put("count", obj[4]);
+			array.add(hotMap);
+		}
+		JSONObject o = new JSONObject();
+		o.put("course", array);
+		o.put("search", name);
+		return o;
+	}
+
 }

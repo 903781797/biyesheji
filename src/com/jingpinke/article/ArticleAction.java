@@ -32,6 +32,13 @@ public void setPage(String page) {
 private Map map;
 private JSONObject o;
 private String page;
+
+public String search(){
+	if(articleId.equals("")||articleId==null)
+	return "search";
+	o = articleService.search(articleId);
+	return "search";
+}
 public void next(){
 	int p = Integer.parseInt(page);
 	System.out.println("p"+p);

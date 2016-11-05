@@ -19,4 +19,10 @@ public Map getArtice(String articleId);
  * @return
  */
 public JSONObject getList(String id,Page page);
+/**
+ * ËÑË÷
+ * @param name
+ * @return
+ */
+public JSONObject search(String name);
 }
