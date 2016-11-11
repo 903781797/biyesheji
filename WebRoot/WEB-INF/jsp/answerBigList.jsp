@@ -49,7 +49,11 @@
 				<div class="col-lg-7" id="goanser">
 					<h1 class="title">学贵知疑，学习疑难问老师</h1>
 					<h3 class="title2">帮您找到优秀的线上教师，解决个性化学习难题</h3>
-					<a href="#">
+					${sessionScope.user.shenfen}
+					<s:if test="sessionScope.user.shenfen!='teacher'"><a href="javascritp:void(0)" data-toggle="modal" data-target="#myModal"></s:if>
+					<s:else>
+					<a  onclick="pleaselogin();" >
+					</s:else>
 						<div class="ans_btn">
 							<p class="title">课程问题快速解答</p>
 							<p class="context">向老师提问</p>
@@ -159,7 +163,71 @@
 			</div>
 		</div>
 	</div>
-
+	
+	<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" style="width:80%">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					向老师提问
+				</h4>
+			</div>
+            <form action="article_addarticle" method="post" id="from" onSubmit="return form_yz()">
+			<div class="modal-body form-group" id="form_bd">
+				  <p> <label >输入问题：</label ><input type="text"  name="title" id="wenti" class="form-control"></p>
+                  <p> <label >详细描述：</label ><textarea name="content" class="form-control" id="xxms"></textarea></p>
+                  <p> 
+                  	<label >选择板块：</label >
+                 	 <select name="maid" class="form-control" id="bkxz">
+                     	<s:iterator value="allCourse.fenlei">
+                        <option value="<s:property value="btid"/>"><s:property value="btname" /></option>
+						</s:iterator>
+                     </select>
+                  </p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+				<button type="sumbit" class="btn btn-primary">
+					提 交
+				</button>
+			</div>
+            </form>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+ <script>
+    function form_yz(){
+		var boolean;
+		
+		if($("#wenti").val()==""){
+		$("#wenti").after("<span style='color:red;'>不能为空<span>");
+		boolean = false;
+		}else{
+			$("#wenti").next().remove();
+		}
+		if($("#xxms").val()==""){
+		$("#xxms").after("<span style='color:red;'>不能为空<span>");
+		boolean = false;
+		}else{
+			$("#xxms").next().remove();
+		}
+		alert($("#bkxz").val());
+		if($("#bkxz").val()=""){
+		$("#bkxz").after("<span style='color:red;'>不能为空<span>");
+		boolean = false;
+		}else{
+		$("#bkxz").next().remove();
+		}
+		return boolean;
+	}
+    function pleaselogin(){
+    	alert("请登录")
+    }
+    </script>
 
 	<!--
         	作者：zhaoqingchun163@163.com

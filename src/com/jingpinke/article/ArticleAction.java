@@ -17,6 +17,27 @@ import com.jingpinke.util.ResponseUtil;
 public class ArticleAction implements ServletResponseAware {
 private JingpinIArticleService articleService;
 private String articleId;
+private String maid;    //板块id
+private String title;    //问题标题
+private String content;    //问题内容
+public String getMaid() {
+	return maid;
+}
+public void setMaid(String maid) {
+	this.maid = maid;
+}
+public String getTitle() {
+	return title;
+}
+public void setTitle(String title) {
+	this.title = title;
+}
+public String getContent() {
+	return content;
+}
+public void setContent(String content) {
+	this.content = content;
+}
 public JSONObject getO() {
 	return o;
 }
@@ -32,6 +53,11 @@ public void setPage(String page) {
 private Map map;
 private JSONObject o;
 private String page;
+
+public String addarticle(){
+	System.out.println(title+content+maid);
+	return "addarticle";
+}
 
 public String search(){
 	if(articleId.equals("")||articleId==null)
